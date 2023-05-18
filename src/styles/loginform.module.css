@@ -1,0 +1,47 @@
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .container h1 {
+    text-align: center;
+  }
+  
+  .container p {
+    color: red;
+  }
+  
+  .container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container form div {
+    margin-bottom: 10px;
+  }
+  
+  .container label {
+    font-weight: bold;
+    color: grey;
+  }
+  
+  .container input[type='email'],
+  .container input[type='password'] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .container button[type='submit'] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

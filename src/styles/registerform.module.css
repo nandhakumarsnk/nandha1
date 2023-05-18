@@ -1,0 +1,32 @@
+.formContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .formContainer label {
+    display: block;
+    font-weight: bold;
+    color: gray;
+  }
+  
+  .formContainer input[type='text'],
+  .formContainer input[type='email'],
+  .formContainer input[type='password'] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .formContainer button[type='submit'] {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
