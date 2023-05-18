@@ -56,35 +56,35 @@ export const closePool = async () => {
 //   }
 // };
 
+//--------------------------SERVER SIDE CODE CANNOT ACCEPT IN GITHUB----------------------------
 
-export async function authenticateUser(email, password) {
-  const pool = await sql.connect(config);
-  // const pool = await sql.ConnectionPool(config);
-  try {
-    const hashedPassword = await bcrypt.hash(password, 10);
+// export async function authenticateUser(email, password) {
+//   const pool = await sql.connect(config);
+//   try {
+//     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const result = await pool
-      .request()
-      .input('email', sql.VarChar, email)
-      .query('SELECT * FROM Users WHERE email = @email');
+//     const result = await pool
+//       .request()
+//       .input('email', sql.VarChar, email)
+//       .query('SELECT * FROM Users WHERE email = @email');
 
-    if (result.recordset.length === 1) {
-      const storedPassword = result.recordset[0].password;
-      const isPasswordMatch = await bcrypt.compare(password, storedPassword);
+//     if (result.recordset.length === 1) {
+//       const storedPassword = result.recordset[0].password;
+//       const isPasswordMatch = await bcrypt.compare(password, storedPassword);
 
-      if (isPasswordMatch) {
-        return {
-          name: result.recordset[0].name,
-          email: result.recordset[0].email
-        };
-      }
-    }
+//       if (isPasswordMatch) {
+//         return {
+//           name: result.recordset[0].name,
+//           email: result.recordset[0].email
+//         };
+//       }
+//     }
 
-    return null;
-  } catch (error) {
-    console.error('Error authenticating user:', error);
-    return null;
-  } finally {
-    sql.close();
-  }
-};
+//     return null;
+//   } catch (error) {
+//     console.error('Error authenticating user:', error);
+//     return null;
+//   } finally {
+//     sql.close();
+//   }
+// };
